@@ -60,3 +60,40 @@
   - Decimal Addition
   - Hexadecimal Addition
   - Operations Including all systems
+  
+  
+# Practice Problems
+  
+  ## Computer Number Systems
+  
+  ### Binary Conversion
+  1) Binary to Octal
+  2) Binary to Decimal
+  3) Binary to Hexadecimal
+  
+  ### Octal Conversion
+  1) Octal to Binary
+  2) Octal to Decimal
+  3) Octal to Hexadecimal
+  
+  ### Decimal Conversion
+  1) Decimal to Binary
+  2) Decimal to Octal
+  3) Decimal to Hexadecimal
+  
+  ### Hexadecimal Conversion
+  1) Hexadecimal to Binary
+  2) Hexadecimal to Octal
+  3) Hexadecimal to Decimal
+  
+  ## Recursive Functions
+  
+  ### Examples
+  
+  ## What Does this Program Do?
+  
+  ### Examples
+  
+  ## Programming Problems
+  
+  ### Examples
