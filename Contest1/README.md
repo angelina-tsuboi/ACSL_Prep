@@ -23,43 +23,23 @@
 ## Recursive Functions
 
 ### Problems inside this Section Includes:
-  - Binary Conversion
-  - Octal Conversion
-  - Decimal Conversion
-  - Hexadecimal Conversion
-  - Binary Addition
-  - Octal Addition
-  - Decimal Addition
-  - Hexadecimal Addition
-  - Operations Including all systems
-  
+  - Simple Recursion (One Input, Few Conditions)
+  - Intermediate Recursion (One Input, Multiple Conditions)
+  - Advanced Recursion (Few Inputs, Multiple Conditions)
   
 ## What Does this Program Do?
 
 ### Problems inside this Section Includes:
-  - Binary Conversion
-  - Octal Conversion
-  - Decimal Conversion
-  - Hexadecimal Conversion
-  - Binary Addition
-  - Octal Addition
-  - Decimal Addition
-  - Hexadecimal Addition
-  - Operations Including all systems
+  - Finding the Outputed Value of Arbitrary Computer Programs
+    - Easy
+    - Intermediate
+    - Hard
   
   
 ## Programming Problems
 
 ### Problems inside this Section Includes:
-  - Binary Conversion
-  - Octal Conversion
-  - Decimal Conversion
-  - Hexadecimal Conversion
-  - Binary Addition
-  - Octal Addition
-  - Decimal Addition
-  - Hexadecimal Addition
-  - Operations Including all systems
+  - Depends on the Competition...
   
   
 # Practice Problems
