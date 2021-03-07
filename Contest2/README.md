@@ -1,6 +1,6 @@
 # Contest Two
 
-## Contest One covers the following topics
+## Contest Two covers the following topics
   - Infix, Postfix, Prefix
   - Bit Flickering
   - LISP
@@ -181,15 +181,32 @@ Express your answer as a 3-digit hexadecimal string.
   2) List all the values of X ( a 5-bit string) that make the following expression TRUE
   ```
   GIVEN: (LSHIFT-2 (RCIRC-1 (NOT X))) = 10000 
+  1. (LSHIFT-2 (RCIRC-1 (NOT abcde))) = 10000 
+  2. (LSHIFT-2 (RCIRC-1 (ABCDE))) = 10000 
+  3. (LSHIFT-2 (EABCD)) = 10000 
+  4. (BCD00) = 10000 
+  5. B = 1, C = 0, D = 0
+  6. b = 0, c = 1, d = 1
+  7. *011* (back to abcde format)
+  ANSWER: *011*
   ```
   3) List all possible values of X (5 bits long) that solve the following equation
   ```
   GIVEN: (LCIRC-3 (RSHIFT-2 01110)) OR (RCIRC-2 X) = 11011
+  1. (LCIRC-3 (00011)) OR (RCIRC-2 abcde) = 11011
+  2. (11000) OR (edabc) = 11011
+  3. 11abc = 11011
+  4. a = 0, b = 1, c = 1
+  5. 011** (back to abcde format)
+  ANSWER: 011**
   ```
   
   ## LISP
+  During the mid 1950s a programming language called LISP ("LISt Processing language") was developed by John McCarthy at MIT. LISP provides simple structure and semantics that allow it to be one of the most powerful and simplest programming language. Its unconventional structure and simplicity allow programmers to take a break from commonly used algorithmic langauges (Java, C, C++, etc).
   
-  ### Examples
+  ### Basic Functions
+  ### List Functions
+  ### Arithmetic Functions
   
   ## Programming Problems
   
