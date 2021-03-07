@@ -232,15 +232,39 @@ Express your answer as a 3-digit hexadecimal string.
   ### List Functions
   1) (CDR (CAR (CDR ‘((b c) (a d f) (d)))))
   ```
+  GIVEN: (CDR (CAR (CDR ‘((b c) (a d f) (d)))))
+  1. (CDR (CAR (‘((a d f) (d))))
+  2. (CDR (a d f))
+  3. (d f)
+  ANSWER: (d f)
   ```
   2) (CAR (CAR (CDR (CDR ‘(a (b c) (a (b c))))))
   ```
+  GIVEN: (CAR (CAR (CDR (CDR ‘(a (b c) (a (b c))))))
+  1. (CAR (CAR (CDR ((b c) (a (b c)))))
+  2. (CAR (CAR ((a (b c)))))
+  3. (CAR (a (bc)))
+  4. a
+  ANSWER: a
   ```
   3) (CAR (CAR (CDR (CDR (CDR ‘(1 (2 3) 4 ((5 6) (7 8) 9))))))) 
   ```
+  GIVEN: (CAR (CAR (CDR (CDR (CDR ‘(1 (2 3) 4 ((5 6) (7 8) 9)))))))
+  1. (CAR (CAR (CDR (CDR ((2 3) 4 ((5 6) (7 8) 9))))))
+  2. (CAR (CAR (CDR (4 ((5 6) (7 8) 9)))))
+  3. (CAR (CAR (((5 6) (7 8) 9))))
+  4. (CAR ((5 6) (7 8) 9))
+  5. (5 6)
+  ANSWER: (5 6)
   ```
   4) (CDR (CAR (CDR (CAR ‘((b (c d) (e f g)) (h (j k)))))))
   ```
+  GIVEN: (CDR (CAR (CDR (CAR ‘((b (c d) (e f g)) (h (j k)))))))
+  1. (CDR (CAR (CDR ((b (c d) (e f g))))))
+  2. (CDR (CAR ((c d) (e f g))))
+  3. (CDR ((c d)))
+  4. d
+  ANSWER: d
   ```
   ### Arithmetic Functions
   1) (ADD (SUB 4 5) (ADD 6 3) (MULT 4 8))
@@ -270,3 +294,9 @@ Express your answer as a 3-digit hexadecimal string.
   ## Programming Problems
   
   ### Examples
+  
+  ## Sources
+  [ACSL Infix, Postfix, Prefix](http://www.categories.acsl.org/wiki/index.php?title=Prefix/Infix/Postfix_Notation)
+  [ACSL Bit Flickering](http://www.categories.acsl.org/wiki/index.php?title=Bit-String_Flicking)
+  [ACSL LISP](http://www.categories.acsl.org/wiki/index.php?title=LISP)
+  
