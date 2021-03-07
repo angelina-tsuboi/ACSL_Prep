@@ -115,12 +115,23 @@
   3) Infix to Postfix
   ```
   GIVEN: (A + B) ^ (2/3) + (A / 2 – B) / 3
+  1. (((A + B) ^ (2/3)) + (((A / 2) – B) / 3))
+  2. ((^ (+ A B) (/ 2 3)) + (((A / 2) – B) / 3))
+  3. (((A B +) (2 3 /) ^) + (((A 2 /) B –) 3 /))
+  4. (((A B +) (2 3 /) ^) (((A 2 /) B –) 3 /) +)
+  5. A B + 2 3 / ^ A 2 / B - 3 / +
+  6. ANSWER: A B + 2 3 / ^ A 2 / B - 3 / +
   
   ```
   4) Infix to Prefix
   ```
   GIVEN: (s * (s – a) * (s – b) * (s – c)) ^ (1/2)
-  
+  1. (^ (s * (s – a) * (s – b) * (s – c)) (1/2))
+  2. (^ (s * (– s a) * (– s b) * (– s c)) (/ 1 2))
+  3. (^ ((* s (– s a)) * (– s b) * (– s c)) (/ 1 2))
+  4. (^ (* (* ((* s (– s a)) (– s b)) (– s c))) (/ 1 2))
+  5. ^ * * * s - s a - s b - s c / 1 2
+  ANSWER: ^ * * * s - s a - s b - s c / 1 2
   ```
   
   ## Bit Flickering
@@ -131,7 +142,11 @@
   The two arguments are hexadecimal numbers representing bit strings that are 12 bits long.
 Express your answer as a 3-digit hexadecimal string.
   ```
-  GIVEN: A2716 XOR 4E216
+  GIVEN: A27 XOR 4E2
+  1. 1010 0010 0111 XOR 0100 1110 0010
+  2. 1110 1100 0101 
+  3. E C 5
+  ANSWER: EC5
   ```
   2) (RSHIFT-2 (RCIRC-8 (RSHIFT-2 10011)))
   ```
