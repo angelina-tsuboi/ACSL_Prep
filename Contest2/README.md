@@ -151,16 +151,32 @@ Express your answer as a 3-digit hexadecimal string.
   2) (RSHIFT-2 (RCIRC-8 (RSHIFT-2 10011)))
   ```
   GIVEN: (RSHIFT-2 (RCIRC-8 (RSHIFT-2 10011)))
+  1. (RSHIFT-2 (RCIRC-8 (00100)))
+  2. (RSHIFT-2 (RCIRC-8 (00100)))
+  3. (RSHIFT-2 (10000))
+  4. 00100
+  ANSWER: 00100
   ```
   3) (LCIRC-2 (RSHIFT-1 01101)) OR (NOT (RCIRC-2 (LSHIFT-1 01010)))
   ```
   GIVEN: (LCIRC-2 (RSHIFT-1 01101)) OR (NOT (RCIRC-2 (LSHIFT-1 01010)))
+  1.  (LCIRC-2 (00110)) OR (NOT (RCIRC-2 (10100)))
+  2.  (11000) OR (NOT (00101))
+  3.  (11000) OR (11010)
+  4.  11010
   ```
   
   ### List all Possible Values 
   1) How many values of X (5 bits long) satisfy the following equation?
   ```
   GIVEN: (RSHIFT-1 X ) OR 10110 AND 00101 = 00101
+  1. (RSHIFT-1 abcde) OR 10110 AND 00101 = 00101
+  2. 0abcd OR 10110 AND 00101 = 00101
+  3. 0abcd OR 00100 = 00101
+  4. 0a1cd = 00101
+  5. a = 0, c = 0, d = 1
+  6. 0*01* (back to abcde format)
+  ANSWER: 0*01* 
   ```
   2) List all the values of X ( a 5-bit string) that make the following expression TRUE
   ```
