@@ -205,8 +205,56 @@ Express your answer as a 3-digit hexadecimal string.
   During the mid 1950s a programming language called LISP ("LISt Processing language") was developed by John McCarthy at MIT. LISP provides simple structure and semantics that allow it to be one of the most powerful and simplest programming language. Its unconventional structure and simplicity allow programmers to take a break from commonly used algorithmic langauges (Java, C, C++, etc).
   
   ### Basic Functions
+  1) Problem 1
+  ```
+  GIVEN: 
+  (SETQ X '(RI VA FL CA TX))
+  (CAR (CDR (REVERSE X)))
+  What is the value of X?
+  ```
+  2) Overview 1
+  ```
+  (SETQ p '(ADD 1 2 3 4))	(ADD 1 2 3 4)	p is a list with 5 elements
+  (ATOM 'p)	true	The argument to ATOM is the atom p
+  (ATOM p)	NIL	Because p is not quoted, it is evaluated to the 5-element list.
+  (EVAL p)	10	The argument to EVAL is the value of p; the value of p is 10.
+  ```
+  3) Overview 2
+  ```
+  (SET 'a (MULT 2 3))	6	a is an atom with a value of 6
+  (SET 'a '(MULT 2 3))	(MULT 2 3)	a is a list with 3 elements
+  (SET 'b 'a)	a	b is an atom with a value of the character a
+  (SET 'c a)	(MULT 2 3)	c is a list with 3 elements
+  (SETQ EX (ADD 3 (MULT 2 5)))	13	The variable EX has a value of 13
+  (SETQ VOWELS '(A E I O U))	(A E I O U)	VOWELS is a list of 5 elements
+  ```
+  
   ### List Functions
+  1) (CDR (CAR (CDR ‘((b c) (a d f) (d)))))
+  ```
+  ```
+  2) (CAR (CAR (CDR (CDR ‘(a (b c) (a (b c))))))
+  ```
+  ```
+  3) (CAR (CAR (CDR (CDR (CDR ‘(1 (2 3) 4 ((5 6) (7 8) 9))))))) 
+  ```
+  ```
+  4)(CDR (CAR (CDR (CAR ‘((b (c d) (e f g)) (h (j k)))))))
+  ```
+  ```
   ### Arithmetic Functions
+  1) (ADD (SUB 4 5) (ADD 6 3) (MULT 4 8))
+  ```
+  GIVEN: (ADD (SUB 4 5) (ADD 6 3) (MULT 4 8))
+  ```
+  2) (DIV (MULT (ADD 1 4 5) (SUB 7 2)) (EXP 5 2)) 
+  ```
+  GIVEN: (DIV (MULT (ADD 1 4 5) (SUB 7 2)) (EXP 5 2)) 
+  ```
+  3) (MULT (ADD 2 3 1 (EXP 3 2)) (SUB (MULT 4 2) (DIV 10 2)))
+  ```
+  GIVEN: (MULT (ADD 2 3 1 (EXP 3 2)) (SUB (MULT 4 2) (DIV 10 2)))
+  ```
   
   ## Programming Problems
   
