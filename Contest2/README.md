@@ -294,6 +294,8 @@ Express your answer as a 3-digit hexadecimal string.
   ## Programming Problems
   
   ### Examples
+  [ACSL Practice Programming Problem](http://www.datafiles.acsl.org/samples/contest2/c2-int-prog.pdf)
+ 
   
   ## Sources
   [ACSL Infix, Postfix, Prefix](http://www.categories.acsl.org/wiki/index.php?title=Prefix/Infix/Postfix_Notation)
