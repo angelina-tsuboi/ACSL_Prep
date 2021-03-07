@@ -25,8 +25,9 @@
 ## LISP
 
 ### Problems inside this Section Includes:
-  - 
-  - 
+  - Basic Functions (SET, SETQ, EVAL, ATOM)
+  - List Functions (CAR, CDR, CONS, REVERSE)
+  - Arithmetic Functions (ADD, MULT, ...)
   
   
 ## Programming Problems
@@ -123,9 +124,37 @@
   ```
   
   ## Bit Flickering
+  Bit Strings (strings of binary digits) can be modified by logical operators such as NOT, AND, OR, and XOR. Furthermore, they can be manipulated by as a unit using SHIFT and circulate operators. The bit furthest to the left is called the most significant bit and the bit furthest to the right is called least significant bit.
   
+  ### Evaluate 
+  1) A2716 XOR 4E216
+  The two arguments are hexadecimal numbers representing bit strings that are 12 bits long.
+Express your answer as a 3-digit hexadecimal string.
+  ```
+  GIVEN: A2716 XOR 4E216
+  ```
+  2) (RSHIFT-2 (RCIRC-8 (RSHIFT-2 10011)))
+  ```
+  GIVEN: (RSHIFT-2 (RCIRC-8 (RSHIFT-2 10011)))
+  ```
+  3) (LCIRC-2 (RSHIFT-1 01101)) OR (NOT (RCIRC-2 (LSHIFT-1 01010)))
+  ```
+  GIVEN: (LCIRC-2 (RSHIFT-1 01101)) OR (NOT (RCIRC-2 (LSHIFT-1 01010)))
+  ```
   
-  ### Examples
+  ### List all Possible Values 
+  1) How many values of X (5 bits long) satisfy the following equation?
+  ```
+  GIVEN: (RSHIFT-1 X ) OR 10110 AND 00101 = 00101
+  ```
+  2) List all the values of X ( a 5-bit string) that make the following expression TRUE
+  ```
+  GIVEN: (LSHIFT-2 (RCIRC-1 (NOT X))) = 10000 
+  ```
+  3) List all possible values of X (5 bits long) that solve the following equation
+  ```
+  GIVEN: (LCIRC-3 (RSHIFT-2 01110)) OR (RCIRC-2 X) = 11011
+  ```
   
   ## LISP
   
