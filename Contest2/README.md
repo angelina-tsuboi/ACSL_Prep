@@ -104,14 +104,22 @@
   2) Postfix to Prefix
    ```
   GIVEN: A A B + C A B / - / * 
+  1. A (+ A B) C (/ A B) - / *
+  2. A (+ A B) (- C (/ A B)) / *
+  3. A (/ (+ A B) (- C (/ A B))) *
+  4. (* A (/ (+ A B) (- C (/ A B))))
+  5. * A / + A B - C / A B
+  ANSWER: * A / + A B - C / A B
   ```
   3) Infix to Postfix
   ```
   GIVEN: (A + B) ^ (2/3) + (A / 2 – B) / 3
+  
   ```
   4) Infix to Prefix
   ```
   GIVEN: (s * (s – a) * (s – b) * (s – c)) ^ (1/2)
+  
   ```
   
   ## Bit Flickering
