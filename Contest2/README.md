@@ -38,31 +38,24 @@
 # Practice Problems
   
   ## Infix, Postfix, Prefix
+  Normally we see mathematical expressions written with the operator acting between the operands (ie. 2 + 2, 15 / 3, 3 * (x - 4), etc). This convention is called infix notation where a operator(p) acts between the surrounding operands (d) -> d p d. Prefix notation is when the operator comes before its two operands p d d (ie. / 4 2, * 8 6, - 9 (+ x 4), etc). Lastly a postfix expression occurs when the operator comes after the two operands d d p (ie. 4 2 /, 8 6 *, 9 (x 4 +) -, etc). Below are examples on how to convert between the notations...
   
-  ### Infix to Postfix
-  1) 
+  ### Evaluating Expressions
+  1) Evaluate the 
   ```
-  101 -> 101 -> (4 + 1) -> 5
-         421
+ 
   ```
  
   
-  ### Infix to Prefix
-  1) 
+  ### Conversion between Expressions (ie. Infix -> Prefix, Postfix -> Prefix)
+  1) Infix to Prefix
    ```
-  46 -> 4 6 -> (100) -> (110) -> 100110
-               421       421
+   AX2 + BX + C = 0
   ```
-
-  
-  ### Prefix to Infix
-  1) 
+  2) Postfix to Prefix
+   ```
+   A A B + C A B / - / * 
   ```
-                            32 16 8 4 2 1 
-  24 -> 24 - 16 - 8 = 0 ->  0  1 1 0 0 0 -> 11000
-  ```
-  
-  ### Postfix to Infix
   
   ## Bit Flickering
   
