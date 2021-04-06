@@ -9,10 +9,10 @@
 ## Boolean Algebra
 
 ### Problems inside this Section Includes:
-  - Infix to Postfix
-  - Infix to Prefix 
-  - Postfix to Infix
-  - Prefix to Infix
+  - Operators
+  - Laws
+  - Order of Precedence
+  - Fundamental Identities
   
   
 ## Data Structures
@@ -38,7 +38,7 @@
   
 # Practice Problems
   
-  ## Infix, Postfix, Prefix
+  ## Boolean Algebra
   Normally we see mathematical expressions written with the operator acting between the operands (ie. 2 + 2, 15 / 3, 3 * (x - 4), etc). This convention is called infix notation where a operator(p) acts between the surrounding operands (d) -> d p d. Prefix notation is when the operator comes before its two operands p d d (ie. / 4 2, * 8 6, - 9 (+ x 4), etc). Lastly a postfix expression occurs when the operator comes after the two operands d d p (ie. 4 2 /, 8 6 *, 9 (x 4 +) -, etc). Below are examples on how to convert between the notations...
   
   ### Evaluating Expressions
@@ -298,7 +298,7 @@ Express your answer as a 3-digit hexadecimal string.
  
   
   ## Sources
-  [ACSL Infix, Postfix, Prefix](http://www.categories.acsl.org/wiki/index.php?title=Prefix/Infix/Postfix_Notation)
+  [ACSL Boolean Algebra](http://www.categories.acsl.org/wiki/index.php?title=Boolean_Algebra)
   [ACSL Bit Flickering](http://www.categories.acsl.org/wiki/index.php?title=Bit-String_Flicking)
   [ACSL LISP](http://www.categories.acsl.org/wiki/index.php?title=LISP)
   
