@@ -18,9 +18,10 @@
 ## Data Structures
 
 ### Problems inside this Section Includes:
-  - Bitwise Operators
-  - Shift Operators
-  - Order of Precedence
+  - Stacks
+  - Queues
+  - Binary Search Trees
+  - Priority Queues
   
 ## FSAs and Regular Expressions
 
@@ -134,10 +135,11 @@
   ANSWER: ^ * * * s - s a - s b - s c / 1 2
   ```
   
-  ## Bit Flickering
-  Bit Strings (strings of binary digits) can be modified by logical operators such as NOT, AND, OR, and XOR. Furthermore, they can be manipulated by as a unit using SHIFT and circulate operators. The bit furthest to the left is called the most significant bit and the bit furthest to the right is called least significant bit.
+  ## Data Structures
+  The core of every computer program consists of data structures and algorithms. Data strurctures would be meaningless without algorithms to manipulate them and it would be a trivial task to utilize an algorithm without data strctures for them to operate on. The bigger the data sets, the more important data structures are to computer programs.
   
-  ### Evaluate 
+  ### STACK
+  A stack is a way to store information for later use. Items within a stack are served via LIFO order (last in, first out). 
   1) A2716 XOR 4E216
   The two arguments are hexadecimal numbers representing bit strings that are 12 bits long.
 Express your answer as a 3-digit hexadecimal string.
@@ -166,7 +168,9 @@ Express your answer as a 3-digit hexadecimal string.
   4.  11010
   ```
   
-  ### List all Possible Values 
+  ### Queue
+  A queue is used to process data in which the requests are generated. A new item can not be processed into the queue without all the other items currently residing inside the queue being processed. This is called FIFO order (first in, first out).
+  
   1) How many values of X (5 bits long) satisfy the following equation?
   ```
   GIVEN: (RSHIFT-1 X ) OR 10110 AND 00101 = 00101
@@ -201,95 +205,11 @@ Express your answer as a 3-digit hexadecimal string.
   ANSWER: 011**
   ```
   
-  ## LISP
-  During the mid 1950s a programming language called LISP ("LISt Processing language") was developed by John McCarthy at MIT. LISP provides simple structure and semantics that allow it to be one of the most powerful and simplest programming language. Its unconventional structure and simplicity allow programmers to take a break from commonly used algorithmic langauges (Java, C, C++, etc).
+  ### Binary Search Tree
+  The binary search tree is utilized when storing data that needs to be able to efficently process operations such as insertion, deletion, and query. 
   
-  ### Basic Functions
-  1) Problem 1
-  ```
-  GIVEN: 
-  (SETQ X '(RI VA FL CA TX))
-  (CAR (CDR (REVERSE X)))
-  What is the value of X?
-  ```
-  2) Overview 1
-  ```
-  (SETQ p '(ADD 1 2 3 4)) -> (ADD 1 2 3 4) :	p is a list with 5 elements
-  (ATOM 'p) ->	true : The argument to ATOM is the atom p
-  (ATOM p) ->	NIL	: Because p is not quoted, it is evaluated to the 5-element list.
-  (EVAL p) ->	10 : The argument to EVAL is the value of p; the value of p is 10.
-  ```
-  3) Overview 2
-  ```
-  (SET 'a (MULT 2 3)) ->	6	: a is an atom with a value of 6
-  (SET 'a '(MULT 2 3)) -> (MULT 2 3) : a is a list with 3 elements
-  (SET 'b 'a)	 -> a	: b is an atom with a value of the character a
-  (SET 'c a) -> (MULT 2 3) : c is a list with 3 elements
-  (SETQ EX (ADD 3 (MULT 2 5))) -> 13 : The variable EX has a value of 13
-  (SETQ VOWELS '(A E I O U)) -> (A E I O U) : VOWELS is a list of 5 elements
-  ```
-  
-  ### List Functions
-  1) (CDR (CAR (CDR ‘((b c) (a d f) (d)))))
-  ```
-  GIVEN: (CDR (CAR (CDR ‘((b c) (a d f) (d)))))
-  1. (CDR (CAR (‘((a d f) (d))))
-  2. (CDR (a d f))
-  3. (d f)
-  ANSWER: (d f)
-  ```
-  2) (CAR (CAR (CDR (CDR ‘(a (b c) (a (b c))))))
-  ```
-  GIVEN: (CAR (CAR (CDR (CDR ‘(a (b c) (a (b c))))))
-  1. (CAR (CAR (CDR ((b c) (a (b c)))))
-  2. (CAR (CAR ((a (b c)))))
-  3. (CAR (a (bc)))
-  4. a
-  ANSWER: a
-  ```
-  3) (CAR (CAR (CDR (CDR (CDR ‘(1 (2 3) 4 ((5 6) (7 8) 9))))))) 
-  ```
-  GIVEN: (CAR (CAR (CDR (CDR (CDR ‘(1 (2 3) 4 ((5 6) (7 8) 9)))))))
-  1. (CAR (CAR (CDR (CDR ((2 3) 4 ((5 6) (7 8) 9))))))
-  2. (CAR (CAR (CDR (4 ((5 6) (7 8) 9)))))
-  3. (CAR (CAR (((5 6) (7 8) 9))))
-  4. (CAR ((5 6) (7 8) 9))
-  5. (5 6)
-  ANSWER: (5 6)
-  ```
-  4) (CDR (CAR (CDR (CAR ‘((b (c d) (e f g)) (h (j k)))))))
-  ```
-  GIVEN: (CDR (CAR (CDR (CAR ‘((b (c d) (e f g)) (h (j k)))))))
-  1. (CDR (CAR (CDR ((b (c d) (e f g))))))
-  2. (CDR (CAR ((c d) (e f g))))
-  3. (CDR ((c d)))
-  4. d
-  ANSWER: d
-  ```
-  ### Arithmetic Functions
-  1) (ADD (SUB 4 5) (ADD 6 3) (MULT 4 8))
-  ```
-  GIVEN: (ADD (SUB 4 5) (ADD 6 3) (MULT 4 8))
-  1. (ADD (-1) (9) (32))
-  2. 40
-  ANSWER: 40
-  ```
-  2) (DIV (MULT (ADD 1 4 5) (SUB 7 2)) (EXP 5 2)) 
-  ```
-  GIVEN: (DIV (MULT (ADD 1 4 5) (SUB 7 2)) (EXP 5 2)) 
-  1. (DIV (MULT (10) (5)) (25)) 
-  2. (DIV (50) (25)) 
-  3. 2
-  ANSWER: 2
-  ```
-  3) (MULT (ADD 2 3 1 (EXP 3 2)) (SUB (MULT 4 2) (DIV 10 2)))
-  ```
-  GIVEN: (MULT (ADD 2 3 1 (EXP 3 2)) (SUB (MULT 4 2) (DIV 10 2)))
-  1. (MULT (ADD 2 3 1 (9)) (SUB (8) (5)))
-  2. (MULT (15) (3))
-  3. 45
-  ANSWER: 45
-  ```
+  ### Priority Queue
+  The priority queue is used similiary to the binary search tree, but a person cannot delete an arbitrary item nor can they make an arbitrary query. A person can only find or delete the smallest element of the list.
   
   ## Programming Problems
   
